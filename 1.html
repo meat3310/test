@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>blocki</title>
+	<link rel="stylesheet" href="1.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+	</script>
+	<!-- <style>
+		div{
+			height: 100px;
+			width: 100px;
+			background-color: lime;
+			margin: 10px;
+			display: inline-block;
+		}
+		.red{
+			background-color: red;
+		}
+	</style> -->
+
+</head>
+<body>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<div class="box"></div>
+	<script>
+		$('div').on('click', function(event){
+			
+			
+    	$(event.target).toggleClass('red');
+    	if ($('.red').length==3){
+    		setTimeout("alert('осталось закрасить еще 2 блока!')",100);
+    	}
+    	else if ($('.red').length==5){
+    		
+    		setTimeout("alert('молодец можешь теперь все перекрасить!!!')",100);
+    	}
+		});
+  //http://louisremi.github.io/jquery.transform.js/
+	</script>
+</body>
+</html>
